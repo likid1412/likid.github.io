@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on LI KID</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on LI KID</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Mar 2020 00:10:31 +0800</lastBuildDate>
+    <atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Prometheus Getting Started With Docker</title>
+      <link>http://example.org/posts/prometheus-getting-started-with-docker/</link>
+      <pubDate>Sun, 15 Mar 2020 00:10:31 +0800</pubDate>
+      <guid>http://example.org/posts/prometheus-getting-started-with-docker/</guid>
+      <description>&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;You can getting started with the &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;, but this guid is not based on docker. Let&amp;rsquo;s getting started prometheus with docker. More detail, please visit &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;prometheus-configuration&#34;&gt;Prometheus configuration&lt;/h2&gt;
+&lt;p&gt;Create prometheus configuration &lt;code&gt;prometheus.yml&lt;/code&gt;, rule files &lt;code&gt;prometheus.rules.yml&lt;/code&gt;. You can find  &lt;code&gt;prometheus.yml&lt;/code&gt; and  &lt;code&gt;prometheus.rules.yml&lt;/code&gt; contents in &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;prometheus.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;global&lt;/span&gt;:
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;scrape_interval&lt;/span&gt;:     15s &lt;span style=&#34;color:#75715e&#34;&gt;# By default, scrape targets every 15 seconds.&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;evaluation_interval&lt;/span&gt;: 15s &lt;span style=&#34;color:#75715e&#34;&gt;# Evaluate rules every 15 seconds.&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# Attach these extra labels to all timeseries collected by this Prometheus instance.&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;external_labels&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;monitor&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;codelab-monitor&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;rule_files&lt;/span&gt;:
+  - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;prometheus.rules.yml&amp;#39;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;scrape_configs&lt;/span&gt;:
+  - &lt;span style=&#34;color:#66d9ef&#34;&gt;job_name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;prometheus&amp;#39;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Override the global default and scrape targets from this job every 5 seconds.&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;scrape_interval&lt;/span&gt;: 5s
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;static_configs&lt;/span&gt;:
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;targets&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;localhost:9090&amp;#39;&lt;/span&gt;]
+
+  - &lt;span style=&#34;color:#66d9ef&#34;&gt;job_name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;example-random&amp;#39;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;# Override the global default and scrape targets from this job every 5 seconds.&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;scrape_interval&lt;/span&gt;: 5s
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;static_configs&lt;/span&gt;:
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;targets&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;example-random0:8080&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;example-random1:8081&amp;#39;&lt;/span&gt;]
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;labels&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;group&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;production&amp;#39;&lt;/span&gt;
+
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;targets&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;example-random2:8082&amp;#39;&lt;/span&gt;]
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;labels&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;group&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;canary&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The example-random targets is running in docker now, so we should replace &lt;code&gt;localhost&lt;/code&gt; with docker container name (config in &lt;strong&gt;docker-compose.yml&lt;/strong&gt; ) in &lt;code&gt;example-random&lt;/code&gt; job targets, suck as  &lt;code&gt;example-random0&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;prometheus.rules.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;groups&lt;/span&gt;:
+- &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: example
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;rules&lt;/span&gt;:
+  - &lt;span style=&#34;color:#66d9ef&#34;&gt;record&lt;/span&gt;: job_service:rpc_durations_seconds_count:avg_rate5m
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;expr&lt;/span&gt;: avg(rate(rpc_durations_seconds_count[5m])) by (job, service)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;docker-compose-configuration&#34;&gt;Docker Compose configuration&lt;/h2&gt;
+&lt;p&gt;Create Docker Compose configuration &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;docker-compose.yml&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3.2&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;services&lt;/span&gt;:
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;prometheus&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;image&lt;/span&gt;: prom/prometheus:latest
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;container_name&lt;/span&gt;: prometheus
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ports&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;9090&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9090&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;command&lt;/span&gt;:
+    - --config.file=/etc/prometheus/prometheus.yml
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;volumes&lt;/span&gt;:
+    - ./config/prometheus:/etc/prometheus
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;alertmanager&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;image&lt;/span&gt;: prom/alertmanager:latest
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;container_name&lt;/span&gt;: alertmanager
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ports&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;9093&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;9093&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;example-random0&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;image&lt;/span&gt;: prom/client_golang_examples_simple:beorn7_release
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;container_name&lt;/span&gt;: example-random0
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ports&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;8080&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;8080&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;entrypoint&lt;/span&gt;: /random
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;command&lt;/span&gt;:
+    - -listen-address=:&lt;span style=&#34;color:#ae81ff&#34;&gt;8080&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;example-random1&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;image&lt;/span&gt;: prom/client_golang_examples_simple:beorn7_release
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;container_name&lt;/span&gt;: example-random1
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ports&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;8081&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;8081&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;entrypoint&lt;/span&gt;: /random
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;command&lt;/span&gt;:
+    - -listen-address=:&lt;span style=&#34;color:#ae81ff&#34;&gt;8081&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;example-random2&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;image&lt;/span&gt;: prom/client_golang_examples_simple:beorn7_release
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;container_name&lt;/span&gt;: example-random2
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;ports&lt;/span&gt;:
+    - &lt;span style=&#34;color:#ae81ff&#34;&gt;8082&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;8082&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;entrypoint&lt;/span&gt;: /random
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;command&lt;/span&gt;:
+    - -listen-address=:&lt;span style=&#34;color:#ae81ff&#34;&gt;8082&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;contents of directories look like this&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;prometheus_getting_started/
+├── config
+│   └── prometheus
+│       ├── prometheus.rules.yml
+│       └── prometheus.yml
+└── docker-compose.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To run the installation:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;docker-compose up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;ps: you can add &lt;code&gt;-d&lt;/code&gt; option to run containers in the background, just like this &lt;code&gt;docker-compose up -d&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;exploring-the-web-ui&#34;&gt;Exploring the web UI&lt;/h2&gt;
+&lt;p&gt;Check the targets state in &lt;code&gt;http://localhost:909/targets&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://example.org/images/prometheus-getting-started-with-docker/targets.png&#34; alt=&#34;targets&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Try &lt;code&gt;job_service:rpc_durations_seconds_count:avg_rate5m&lt;/code&gt; metric in &lt;code&gt;http://localhost:9090/graph&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://example.org/images/prometheus-getting-started-with-docker/graph.png&#34; alt=&#34;graph&#34;&gt;&lt;/p&gt;
+&lt;p&gt;ref:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://prometheus.io/docs/guides/cadvisor/&#34;&gt;Monitoring Docker container metrics using cAdvisor | Prometheus&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
