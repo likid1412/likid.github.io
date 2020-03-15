@@ -15,9 +15,9 @@
       <pubDate>Sun, 15 Mar 2020 00:10:31 +0800</pubDate>
       <guid>http://example.org/posts/prometheus-getting-started-with-docker/</guid>
       <description>&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
-&lt;p&gt;You can getting started with the &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;, but this guid is not based on docker. Let&amp;rsquo;s getting started prometheus with docker. More detail, please visit &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Just getting started with the &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;, but this guide is not based on docker. Let&amp;rsquo;s getting started prometheus with docker.&lt;/p&gt;
 &lt;h2 id=&#34;prometheus-configuration&#34;&gt;Prometheus configuration&lt;/h2&gt;
-&lt;p&gt;Create prometheus configuration &lt;code&gt;prometheus.yml&lt;/code&gt;, rule files &lt;code&gt;prometheus.rules.yml&lt;/code&gt;. You can find  &lt;code&gt;prometheus.yml&lt;/code&gt; and  &lt;code&gt;prometheus.rules.yml&lt;/code&gt; contents in &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Create prometheus configuration &lt;code&gt;prometheus.yml&lt;/code&gt;, rule files &lt;code&gt;prometheus.rules.yml&lt;/code&gt;. You can find &lt;code&gt;prometheus.yml&lt;/code&gt; and &lt;code&gt;prometheus.rules.yml&lt;/code&gt; contents in &lt;a href=&#34;https://prometheus.io/docs/prometheus/latest/getting_started/&#34;&gt;Getting started | Prometheus&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prometheus.yml&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;global&lt;/span&gt;:
   &lt;span style=&#34;color:#66d9ef&#34;&gt;scrape_interval&lt;/span&gt;:     15s &lt;span style=&#34;color:#75715e&#34;&gt;# By default, scrape targets every 15 seconds.&lt;/span&gt;
@@ -52,7 +52,7 @@
       - &lt;span style=&#34;color:#66d9ef&#34;&gt;targets&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;example-random2:8082&amp;#39;&lt;/span&gt;]
         &lt;span style=&#34;color:#66d9ef&#34;&gt;labels&lt;/span&gt;:
           &lt;span style=&#34;color:#66d9ef&#34;&gt;group&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;canary&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The example-random targets is running in docker now, so we should replace &lt;code&gt;localhost&lt;/code&gt; with docker container name (config in &lt;strong&gt;docker-compose.yml&lt;/strong&gt; ) in &lt;code&gt;example-random&lt;/code&gt; job targets, suck as  &lt;code&gt;example-random0&lt;/code&gt;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;example-random&lt;/code&gt; targets is running in docker now, so we should replace &lt;code&gt;localhost&lt;/code&gt; with docker container name (config in &lt;strong&gt;docker-compose.yml&lt;/strong&gt; ) in &lt;code&gt;example-random&lt;/code&gt; job targets, such as &lt;code&gt;example-random0&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;prometheus.rules.yml&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;groups&lt;/span&gt;:
 - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: example

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>Prometheus Getting Started With Docker – LI KID</title>
-<meta name="description" content="Getting Started You can getting started with the Getting started | Prometheus, but this guid is not based on docker. Let&amp;rsquo;s getting started prometheus with docker. …">
+<meta name="description" content="Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let&amp;rsquo;s getting started prometheus with docker. …">
 <meta name="created" content="2020-03-15T00:10:31+0800">
 <meta name="modified" content="2020-03-15T00:10:31+0800">
 
@@ -33,7 +33,7 @@
     "datePublished": "2020-03-15T00:10:31+08:00",
     "dateModified": "2020-03-15T00:10:31+08:00",
     "url" : "http://example.org/posts/prometheus-getting-started-with-docker/",
-    "description": "Getting Started You can getting started with the Getting started | Prometheus, but this guid is not based on docker. Let\u0026rsquo;s getting started prometheus with docker. …",
+    "description": "Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let\u0026rsquo;s getting started prometheus with docker. …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http://example.org/"
@@ -79,9 +79,9 @@
 </header>
 <div class="content">
 <h2 id="getting-started">Getting Started</h2>
-<p>You can getting started with the <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>, but this guid is not based on docker. Let&rsquo;s getting started prometheus with docker. More detail, please visit <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>.</p>
+<p>Just getting started with the <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>, but this guide is not based on docker. Let&rsquo;s getting started prometheus with docker.</p>
 <h2 id="prometheus-configuration">Prometheus configuration</h2>
-<p>Create prometheus configuration <code>prometheus.yml</code>, rule files <code>prometheus.rules.yml</code>. You can find  <code>prometheus.yml</code> and  <code>prometheus.rules.yml</code> contents in <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>.</p>
+<p>Create prometheus configuration <code>prometheus.yml</code>, rule files <code>prometheus.rules.yml</code>. You can find <code>prometheus.yml</code> and <code>prometheus.rules.yml</code> contents in <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>.</p>
 <p><strong>prometheus.yml</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">global</span>:
   <span style="color:#66d9ef">scrape_interval</span>:     15s <span style="color:#75715e"># By default, scrape targets every 15 seconds.</span>
@@ -116,7 +116,7 @@
       - <span style="color:#66d9ef">targets</span>: [<span style="color:#e6db74">&#39;example-random2:8082&#39;</span>]
         <span style="color:#66d9ef">labels</span>:
           <span style="color:#66d9ef">group</span>: <span style="color:#e6db74">&#39;canary&#39;</span>
-</code></pre></div><p>The example-random targets is running in docker now, so we should replace <code>localhost</code> with docker container name (config in <strong>docker-compose.yml</strong> ) in <code>example-random</code> job targets, suck as  <code>example-random0</code>.</p>
+</code></pre></div><p>The <code>example-random</code> targets is running in docker now, so we should replace <code>localhost</code> with docker container name (config in <strong>docker-compose.yml</strong> ) in <code>example-random</code> job targets, such as <code>example-random0</code>.</p>
 <p><strong>prometheus.rules.yml</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">groups</span>:
 - <span style="color:#66d9ef">name</span>: example
