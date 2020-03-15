@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>LI KID</title>
-    <link>http://example.org/</link>
+    <link>https://likid1412.github.io/</link>
     <description>Recent content on LI KID</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Mar 2020 00:10:31 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://likid1412.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prometheus Getting Started With Docker</title>
-      <link>http://example.org/posts/prometheus-getting-started-with-docker/</link>
+      <link>https://likid1412.github.io/posts/prometheus-getting-started-with-docker/</link>
       <pubDate>Sun, 15 Mar 2020 00:10:31 +0800</pubDate>
       
-      <guid>http://example.org/posts/prometheus-getting-started-with-docker/</guid>
+      <guid>https://likid1412.github.io/posts/prometheus-getting-started-with-docker/</guid>
       <description>Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let&amp;rsquo;s getting started prometheus with docker.
 Prometheus configuration Create prometheus configuration prometheus.yml, rule files prometheus.rules.yml. You can find prometheus.yml and prometheus.rules.yml contents in Getting started | Prometheus.
 prometheus.yml
