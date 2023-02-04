@@ -4,23 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>LI KID  | Prometheus Getting Started With Docker</title>
+    <title>Prometheus Getting Started With Docker | Have fun like a KID</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.67.0" />
+    <meta name="description" content="Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let&rsquo;s getting started prometheus with docker.
+Prometheus configuration Create prometheus configuration prometheus.yml, rule files prometheus.rules.yml. You can find prometheus.yml and prometheus.rules.yml contents in Getting started | Prometheus.
+prometheus.yml
+global: scrape_interval: 15s # By default, scrape targets every 15 seconds. evaluation_interval: 15s # Evaluate rules every 15 seconds. # Attach these extra labels to all timeseries collected by this Prometheus instance.">
+    <meta name="generator" content="Hugo 0.110.0">
     
     
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+    
+      <meta name="robots" content="noindex, nofollow">
     
 
     
-    
-      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
-    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
 
     
-
+    
     
       
+
     
 
     
@@ -31,20 +38,16 @@ Prometheus configuration Create prometheus configuration prometheus.yml, rule fi
 prometheus.yml
 global: scrape_interval: 15s # By default, scrape targets every 15 seconds. evaluation_interval: 15s # Evaluate rules every 15 seconds. # Attach these extra labels to all timeseries collected by this Prometheus instance." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://likid1412.github.io/posts/prometheus-getting-started-with-docker/" />
+<meta property="og:url" content="https://likid1412.github.io/posts/prometheus-getting-started-with-docker/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-03-15T00:10:31+08:00" />
 <meta property="article:modified_time" content="2020-03-15T00:10:31+08:00" />
 <meta itemprop="name" content="Prometheus Getting Started With Docker">
 <meta itemprop="description" content="Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let&rsquo;s getting started prometheus with docker.
 Prometheus configuration Create prometheus configuration prometheus.yml, rule files prometheus.rules.yml. You can find prometheus.yml and prometheus.rules.yml contents in Getting started | Prometheus.
 prometheus.yml
-global: scrape_interval: 15s # By default, scrape targets every 15 seconds. evaluation_interval: 15s # Evaluate rules every 15 seconds. # Attach these extra labels to all timeseries collected by this Prometheus instance.">
-<meta itemprop="datePublished" content="2020-03-15T00:10:31&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-15T00:10:31&#43;08:00" />
+global: scrape_interval: 15s # By default, scrape targets every 15 seconds. evaluation_interval: 15s # Evaluate rules every 15 seconds. # Attach these extra labels to all timeseries collected by this Prometheus instance."><meta itemprop="datePublished" content="2020-03-15T00:10:31+08:00" />
+<meta itemprop="dateModified" content="2020-03-15T00:10:31+08:00" />
 <meta itemprop="wordCount" content="329">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Prometheus Getting Started With Docker"/>
 <meta name="twitter:description" content="Getting Started Just getting started with the Getting started | Prometheus, but this guide is not based on docker. Let&rsquo;s getting started prometheus with docker.
@@ -52,6 +55,7 @@ Prometheus configuration Create prometheus configuration prometheus.yml, rule fi
 prometheus.yml
 global: scrape_interval: 15s # By default, scrape targets every 15 seconds. evaluation_interval: 15s # Evaluate rules every 15 seconds. # Attach these extra labels to all timeseries collected by this Prometheus instance."/>
 
+	
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -64,27 +68,19 @@ global: scrape_interval: 15s # By default, scrape targets every 15 seconds. eval
     <div class="bg-black">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
-    <a href="https://likid1412.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
-      LI KID
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Have fun like a KID
+      
     </a>
     <div class="flex-l items-center">
       
 
       
       
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="ananke-socials">
+  
+</div>
 
     </div>
   </div>
@@ -109,136 +105,125 @@ global: scrape_interval: 15s # By default, scrape targets every 15 seconds. eval
 
 
 
-  <div id="sharing" class="mt3">
 
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
     
-    <a href="https://www.facebook.com/sharer.php?u=https://likid1412.github.io/posts/prometheus-getting-started-with-docker/" class="facebook no-underline" aria-label="share on Facebook">
-      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
-
-    </a>
-
-    
-    
-    <a href="https://twitter.com/share?url=https://likid1412.github.io/posts/prometheus-getting-started-with-docker/&amp;text=Prometheus%20Getting%20Started%20With%20Docker" class="twitter no-underline" aria-label="share on Twitter">
-      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
-
-    </a>
-
-    
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://likid1412.github.io/posts/prometheus-getting-started-with-docker/&amp;title=Prometheus%20Getting%20Started%20With%20Docker" class="linkedin no-underline" aria-label="share on LinkedIn">
-      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-
-    </a>
   </div>
+
 
       <h1 class="f1 athelas mt3 mb1">Prometheus Getting Started With Docker</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2020-03-15T00:10:31&#43;08:00">March 15, 2020</time>
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-03-15T00:10:31+08:00">March 15, 2020</time>
+      
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="getting-started">Getting Started</h2>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="getting-started">Getting Started</h2>
 <p>Just getting started with the <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>, but this guide is not based on docker. Let&rsquo;s getting started prometheus with docker.</p>
 <h2 id="prometheus-configuration">Prometheus configuration</h2>
 <p>Create prometheus configuration <code>prometheus.yml</code>, rule files <code>prometheus.rules.yml</code>. You can find <code>prometheus.yml</code> and <code>prometheus.rules.yml</code> contents in <a href="https://prometheus.io/docs/prometheus/latest/getting_started/">Getting started | Prometheus</a>.</p>
 <p><strong>prometheus.yml</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">global</span>:
-  <span style="color:#66d9ef">scrape_interval</span>:     15s <span style="color:#75715e"># By default, scrape targets every 15 seconds.</span>
-  <span style="color:#66d9ef">evaluation_interval</span>: 15s <span style="color:#75715e"># Evaluate rules every 15 seconds.</span>
-
-  <span style="color:#75715e"># Attach these extra labels to all timeseries collected by this Prometheus instance.</span>
-  <span style="color:#66d9ef">external_labels</span>:
-    <span style="color:#66d9ef">monitor</span>: <span style="color:#e6db74">&#39;codelab-monitor&#39;</span>
-
-<span style="color:#66d9ef">rule_files</span>:
-  - <span style="color:#e6db74">&#39;prometheus.rules.yml&#39;</span>
-
-<span style="color:#66d9ef">scrape_configs</span>:
-  - <span style="color:#66d9ef">job_name</span>: <span style="color:#e6db74">&#39;prometheus&#39;</span>
-
-    <span style="color:#75715e"># Override the global default and scrape targets from this job every 5 seconds.</span>
-    <span style="color:#66d9ef">scrape_interval</span>: 5s
-
-    <span style="color:#66d9ef">static_configs</span>:
-      - <span style="color:#66d9ef">targets</span>: [<span style="color:#e6db74">&#39;localhost:9090&#39;</span>]
-
-  - <span style="color:#66d9ef">job_name</span>: <span style="color:#e6db74">&#39;example-random&#39;</span>
-
-    <span style="color:#75715e"># Override the global default and scrape targets from this job every 5 seconds.</span>
-    <span style="color:#66d9ef">scrape_interval</span>: 5s
-
-    <span style="color:#66d9ef">static_configs</span>:
-      - <span style="color:#66d9ef">targets</span>: [<span style="color:#e6db74">&#39;example-random0:8080&#39;</span>, <span style="color:#e6db74">&#39;example-random1:8081&#39;</span>]
-        <span style="color:#66d9ef">labels</span>:
-          <span style="color:#66d9ef">group</span>: <span style="color:#e6db74">&#39;production&#39;</span>
-
-      - <span style="color:#66d9ef">targets</span>: [<span style="color:#e6db74">&#39;example-random2:8082&#39;</span>]
-        <span style="color:#66d9ef">labels</span>:
-          <span style="color:#66d9ef">group</span>: <span style="color:#e6db74">&#39;canary&#39;</span>
-</code></pre></div><p>The <code>example-random</code> targets is running in docker now, so we should replace <code>localhost</code> with docker container name (config in <strong>docker-compose.yml</strong> ) in <code>example-random</code> job targets, such as <code>example-random0</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">global</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">scrape_interval</span>:     <span style="color:#ae81ff">15s</span> <span style="color:#75715e"># By default, scrape targets every 15 seconds.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">evaluation_interval</span>: <span style="color:#ae81ff">15s</span> <span style="color:#75715e"># Evaluate rules every 15 seconds.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Attach these extra labels to all timeseries collected by this Prometheus instance.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">external_labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">monitor</span>: <span style="color:#e6db74">&#39;codelab-monitor&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rule_files</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#e6db74">&#39;prometheus.rules.yml&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">scrape_configs</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">job_name</span>: <span style="color:#e6db74">&#39;prometheus&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Override the global default and scrape targets from this job every 5 seconds.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">scrape_interval</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">static_configs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">targets</span>: [<span style="color:#e6db74">&#39;localhost:9090&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">job_name</span>: <span style="color:#e6db74">&#39;example-random&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Override the global default and scrape targets from this job every 5 seconds.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">scrape_interval</span>: <span style="color:#ae81ff">5s</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">static_configs</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">targets</span>: [<span style="color:#e6db74">&#39;example-random0:8080&#39;</span>, <span style="color:#e6db74">&#39;example-random1:8081&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#39;production&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">targets</span>: [<span style="color:#e6db74">&#39;example-random2:8082&#39;</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#39;canary&#39;</span>
+</span></span></code></pre></div><p>The <code>example-random</code> targets is running in docker now, so we should replace <code>localhost</code> with docker container name (config in <strong>docker-compose.yml</strong> ) in <code>example-random</code> job targets, such as <code>example-random0</code>.</p>
 <p><strong>prometheus.rules.yml</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">groups</span>:
-- <span style="color:#66d9ef">name</span>: example
-  <span style="color:#66d9ef">rules</span>:
-  - <span style="color:#66d9ef">record</span>: job_service:rpc_durations_seconds_count:avg_rate5m
-    <span style="color:#66d9ef">expr</span>: avg(rate(rpc_durations_seconds_count[5m])) by (job, service)
-</code></pre></div><h2 id="docker-compose-configuration">Docker Compose configuration</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">groups</span>:
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">example</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">record</span>: <span style="color:#ae81ff">job_service:rpc_durations_seconds_count:avg_rate5m</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expr</span>: <span style="color:#ae81ff">avg(rate(rpc_durations_seconds_count[5m])) by (job, service)</span>
+</span></span></code></pre></div><h2 id="docker-compose-configuration">Docker Compose configuration</h2>
 <p>Create Docker Compose configuration <code>docker-compose.yml</code></p>
 <p><strong>docker-compose.yml</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.2&#39;</span>
-<span style="color:#66d9ef">services</span>:
-  <span style="color:#66d9ef">prometheus</span>:
-    <span style="color:#66d9ef">image</span>: prom/prometheus:latest
-    <span style="color:#66d9ef">container_name</span>: prometheus
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#ae81ff">9090</span>:<span style="color:#ae81ff">9090</span>
-    <span style="color:#66d9ef">command</span>:
-    - --config.file=/etc/prometheus/prometheus.yml
-    <span style="color:#66d9ef">volumes</span>:
-    - ./config/prometheus:/etc/prometheus
-  <span style="color:#66d9ef">alertmanager</span>:
-    <span style="color:#66d9ef">image</span>: prom/alertmanager:latest
-    <span style="color:#66d9ef">container_name</span>: alertmanager
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#ae81ff">9093</span>:<span style="color:#ae81ff">9093</span>
-  <span style="color:#66d9ef">example-random0</span>:
-    <span style="color:#66d9ef">image</span>: prom/client_golang_examples_simple:beorn7_release
-    <span style="color:#66d9ef">container_name</span>: example-random0
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#ae81ff">8080</span>:<span style="color:#ae81ff">8080</span>
-    <span style="color:#66d9ef">entrypoint</span>: /random
-    <span style="color:#66d9ef">command</span>:
-    - -listen-address=:<span style="color:#ae81ff">8080</span>
-  <span style="color:#66d9ef">example-random1</span>:
-    <span style="color:#66d9ef">image</span>: prom/client_golang_examples_simple:beorn7_release
-    <span style="color:#66d9ef">container_name</span>: example-random1
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#ae81ff">8081</span>:<span style="color:#ae81ff">8081</span>
-    <span style="color:#66d9ef">entrypoint</span>: /random
-    <span style="color:#66d9ef">command</span>:
-    - -listen-address=:<span style="color:#ae81ff">8081</span>
-  <span style="color:#66d9ef">example-random2</span>:
-    <span style="color:#66d9ef">image</span>: prom/client_golang_examples_simple:beorn7_release
-    <span style="color:#66d9ef">container_name</span>: example-random2
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#ae81ff">8082</span>:<span style="color:#ae81ff">8082</span>
-    <span style="color:#66d9ef">entrypoint</span>: /random
-    <span style="color:#66d9ef">command</span>:
-    - -listen-address=:<span style="color:#ae81ff">8082</span>
-</code></pre></div><p>contents of directories look like this</p>
-<pre><code>prometheus_getting_started/
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.2&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">prometheus</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">prom/prometheus:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">prometheus</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">9090</span>:<span style="color:#ae81ff">9090</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>    - --<span style="color:#ae81ff">config.file=/etc/prometheus/prometheus.yml</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">./config/prometheus:/etc/prometheus</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">alertmanager</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">prom/alertmanager:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">alertmanager</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">9093</span>:<span style="color:#ae81ff">9093</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">example-random0</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">prom/client_golang_examples_simple:beorn7_release</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">example-random0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">8080</span>:<span style="color:#ae81ff">8080</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">entrypoint</span>: <span style="color:#ae81ff">/random</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>    - -<span style="color:#ae81ff">listen-address=:8080</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">example-random1</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">prom/client_golang_examples_simple:beorn7_release</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">example-random1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">8081</span>:<span style="color:#ae81ff">8081</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">entrypoint</span>: <span style="color:#ae81ff">/random</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>    - -<span style="color:#ae81ff">listen-address=:8081</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">example-random2</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">prom/client_golang_examples_simple:beorn7_release</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">example-random2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">8082</span>:<span style="color:#ae81ff">8082</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">entrypoint</span>: <span style="color:#ae81ff">/random</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">command</span>:
+</span></span><span style="display:flex;"><span>    - -<span style="color:#ae81ff">listen-address=:8082</span>
+</span></span></code></pre></div><p>contents of directories look like this</p>
+<pre tabindex="0"><code>prometheus_getting_started/
 ├── config
 │   └── prometheus
 │       ├── prometheus.rules.yml
 │       └── prometheus.yml
 └── docker-compose.yml
 </code></pre><p>To run the installation:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker-compose up
-</code></pre></div><p><em>ps: you can add <code>-d</code> option to run containers in the background, just like this <code>docker-compose up -d</code></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker-compose up
+</span></span></code></pre></div><p><em>ps: you can add <code>-d</code> option to run containers in the background, just like this <code>docker-compose up -d</code></em></p>
 <h2 id="exploring-the-web-ui">Exploring the web UI</h2>
 <p>Check the targets state in <code>http://localhost:909/targets</code>.</p>
 <p><img src="/images/prometheus-getting-started-with-docker/targets.png" alt="targets"></p>
@@ -268,31 +253,16 @@ global: scrape_interval: 15s # By default, scrape targets every 15 seconds. eval
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://likid1412.github.io" >
-    &copy;  LI KID 2020 
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://likid1412.github.io/" >
+    &copy;  Have fun like a KID 2023 
   </a>
     <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="ananke-socials">
+  
+</div>
 </div>
   </div>
 </footer>
-
-    
-
-  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
-
 
   </body>
 </html>
