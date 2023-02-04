@@ -6,7 +6,16 @@
     <description>Recent content on Have FUN Like a KID</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:10:31 +0800</lastBuildDate><atom:link href="https://likid1412.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Feb 2023 16:36:25 +0800</lastBuildDate><atom:link href="https://likid1412.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Use Hugo</title>
+      <link>https://likid1412.github.io/posts/use-hugo/</link>
+      <pubDate>Sat, 04 Feb 2023 16:36:25 +0800</pubDate>
+      
+      <guid>https://likid1412.github.io/posts/use-hugo/</guid>
+      <description>Simple usage command hugo new posts/my-first-post.md, new post create files in content/posts why not just hugo new my-first-post.md if the posts prefix is fixed hugo server -D, start Hugo’s development server, include draft content exclude -D flag, exclude draft content hugo, publish the site must run it before publish the site remember this command is the main command, which will update your public directory Insert images for Markdown Below is the answer for Stack Overflow</description>
+    </item>
+    
     <item>
       <title>Prometheus Getting Started With Docker</title>
       <link>https://likid1412.github.io/posts/prometheus-getting-started-with-docker/</link>
